@@ -1,0 +1,154 @@
+header {
+	height: 75px;
+	background-color: white;
+}
+
+#nameframe{
+	margin-top: 0px;
+	background-color: #4AAAA5;
+	height: 75px;
+	width: 200px;
+	margin-left: 100px;
+	float: left;
+}
+
+#about{
+	font-size: 30px;
+
+}
+
+#name{
+	width: 200px;
+	position: relative;
+	top: 17px;
+	text-align: center;
+	color: white;
+	font: 35px bookman;
+}
+
+body {
+	background-color: #EFEEEF;
+}
+
+.middle {
+	height: 400px;
+	width: 960px;
+	margin: 50px;
+	margin-left: 100px;
+	background-color: white;
+	font: 20px ariel;
+	width: 960px;
+	padding-top: 20px;
+
+}
+
+
+
+footer {
+	background-color: grey;
+	height: 100px;
+	align-content: bottom;
+}
+
+#maintext {
+
+}
+
+img{
+	float: left;
+	margin-right: 20px;
+}
+
+#clear{
+	clear: both;
+}
+
+#middleheader {
+	font-size: 35px;
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
+
+.middlebody{
+	margin-left: 20px;
+	width: 920px;
+}
+
+.hline{
+	width: 920px;
+	height: 1px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	background-color: lightgrey;
+}
+
+
+#menuframe {
+	float: left;
+	height: 45px;
+	background-color: white;
+	text-align: center;
+	font-size: 15px;
+	margin-left: 555px;
+	padding-top: 30px;
+}
+
+.menuitem {
+	width: 70px;
+	float: left;
+}
+
+.vline {
+	height: 15px;
+	width: 1px;
+	float: left;
+	background-color: lightgrey;
+}
+
+.clearfloat{
+	clear: both;
+}
+
+.contactform{
+	margin-left: 20px;
+	font-size: 15px;
+	font-family: Arial;
+}
+
+.tile {
+	width: 200px;
+	height: 175px;
+	margin-right: 20px;
+	float: left;
+	background-color: #4AAAA5;
+}
+
+.tilecontainer{
+	width: 200px;
+	height: 175px;
+	margin-right: 20px;
+	position: relative;
+    text-align: center;
+    color: white;
+    float: left;
+}
+
+.tiletext {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.tilebox {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 200px;
+    background-color: #4AAAA5;
+}
+
+
