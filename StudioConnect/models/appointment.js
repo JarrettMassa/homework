@@ -1,10 +1,10 @@
 module.exports = function(connection, DataTypes) {
-    var Schedule = connection.define("Schedule", {
+    var Appointment = connection.define("Appointment", {
     	studio_id: DataTypes.INTEGER,
         last_name: DataTypes.STRING,
         email: DataTypes.STRING,
         appt_date: DataTypes.DATEONLY,
         appt_time: DataTypes.TIME
     });
-    return Schedule;
+    return Appointment;
 };

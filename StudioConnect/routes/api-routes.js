@@ -10,11 +10,11 @@ module.exports = function(app,db) {
     });
   });
 
-  app.get("/api/schedule", function(req, res) {
+  app.get("/api/appointment", function(req, res) {
     // findAll returns all entries for a table when used with no options
-    db.Schedule.findAll({}).then(function(dbSchedule) {
+    db.Appointment.findAll({}).then(function(dbAppointment) {
       // We have access to the todos as an argument inside of the callback function
-      res.json(dbSchedule);
+      res.json(dbAppointment);
     });
   });
 
