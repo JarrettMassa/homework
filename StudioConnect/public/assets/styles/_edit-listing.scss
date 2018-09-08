@@ -1,0 +1,28 @@
+.edit-listing {
+
+    color: $blue;
+
+    .arrow {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    section.basic {
+        background-color: $white;
+        width: 100%;
+    }
+
+    section.details {
+        background-color: $gray;
+        width: 100%;
+        margin: 0px;
+    }
+
+
+
+}

@@ -1,0 +1,38 @@
+p {
+    float: right;
+    font-size: 10px;
+    font-weight: 1000;
+}
+
+
+
+h1 {
+    color: $blue;
+}
+
+body{
+    background-color: $white;
+}
+
+.save {
+    background-color: $blue;
+    color: $white;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.save:focus, .aboutme {
+    outline: none;
+}
+
+#user, #envelope, #key{
+    padding-top: 10px;
+    margin-left: 10px;
+
+}
+
+.aboutme {
+    width:100%;
+    border-radius: 0px;
+}

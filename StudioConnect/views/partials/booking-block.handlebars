@@ -1,0 +1,15 @@
+<div class="booking-block">
+    
+    <p>{{initials}} on {{date}} at {{time}}</p>
+
+    <div class="booking-icons">
+
+        <button class="change-state" data-id="{{id}}" data-newstate="{{approved}}">
+            {{#if approved}} <i class="fas fa-thumbs-up"></i> {{else}} {{/if}}
+        </button>
+
+        <button class="more-info" data-id="{{this.id}}"><i class="fas fa-info-circle"></i></button>
+        
+    </div>
+
+</div>

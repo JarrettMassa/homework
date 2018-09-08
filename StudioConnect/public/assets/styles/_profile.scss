@@ -1,0 +1,49 @@
+.card {
+  width: 50%;
+  height: 50%;
+}
+
+h2 {
+  color: $blue;
+  text-align: center;
+}
+
+.photo {
+  width: 30%;
+  height: 30%;
+  padding-top: 30px;
+  margin-left: 246px;
+}
+
+.search {
+  background-color: $blue;
+  color: $white;
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 90px;
+  font-size: 12px;
+  font-family: Montserrat;
+  
+}
+
+.pending {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    // background-color: lightblue;
+    margin-left: 10px;
+   
+  }
+
+  .approved {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    // background-color: lightblue;
+  }
+
+  h3 {
+      margin-left: 90px;
+  }
+

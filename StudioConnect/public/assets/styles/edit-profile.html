@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Edit Profile</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <header>
+
+        <h1>Edit<strong>Profile</strong></h1>
+
+    </header>
+
+    <form> 
+        <div class="input-container">
+                <p>EDIT</p>
+          <i id="user" class="fa fa-user icon"></i>
+          <input class="input-field" type="text" placeholder="Full Name" name="usrnm">
+        </div>
+      
+        <div class="input-container">
+                <p>EDIT</p>
+            <div>
+          <i id="envelope" class="fa fa-envelope icon"></i>
+        </div>
+          <input class="input-field" type="text" placeholder="Email" name="email">
+        </div>
+      
+        <div class="input-container">
+                <p>EDIT</p>
+          <i id="key" class="fa fa-key icon"></i>
+          <input class="input-field" type="password" placeholder="Password" name="psw">
+        </div>
+        <br>
+        
+        <textarea rows="4" cols="50" class="aboutme" placeholder="About Me"></textarea>
+        <br>
+        <br>
+        <button type="save" form="form1" value="save" class="save">SAVE</button>
+      </form>
+
+</body>
+
+</html>

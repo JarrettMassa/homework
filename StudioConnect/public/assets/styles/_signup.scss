@@ -1,0 +1,156 @@
+body {
+    background: $white;
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat;
+    @include centeredDiv();
+    flex-direction: column;
+
+}
+
+.container {
+    width: 100%;
+}
+
+header.signup {
+
+    background: $blue;
+    margin: 0px;
+    padding: 10% 0% 5% 0%;
+    @include centeredDiv;
+    flex-direction: column;
+
+    img {
+        border: 2px solid $white;
+        padding: 10px;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        color: $white;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+main.signup {
+
+    width: 100%;
+    margin: 0px;
+    @include centeredDiv;
+
+
+    .studio-check {
+        border: 3px solid $gray;
+        border-radius: 15px;
+        padding: 5px 10px;
+        margin: 30px 0px;
+        font-size: 10pt;
+        width: 100%;
+        @include blockDiv;
+
+        .toggle {
+
+            input {
+                background: $white;
+                border: 2 px solid $gray;
+                border-radius: 10px;
+            }
+        
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 54px;
+                height: 28px;
+        
+                    input {display:none;}
+        
+            }
+        
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $gray;
+                border-radius: 34px;
+                transition: .4s;
+            }
+            
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 20px;
+                width: 20px;
+                left: 4px;
+                bottom: 4px;
+                background-color: $white;
+                border-radius: 50%;
+                transition: .4s;
+            }
+            
+            input:checked + .slider {
+                background-color: $blue;
+            }
+            
+            input:focus + .slider {
+                box-shadow: 0 0 1em $blue;
+            }
+            
+            input:checked + .slider:before {
+                transform: translateX(26px);
+            }
+        }
+    }
+
+    input {
+        border: 3px solid $gray;
+        border-radius: 15px;
+        padding: 5px 10px;
+        margin: 30px 0px;
+        font-size: 10pt;
+        font-family: Montserrat;
+        height: 30px;
+        width: 100%;
+        @include blockDiv;
+
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+}
+
+@media only screen and (min-width: 640px) {
+    body {
+        background: $gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 80vw;
+        height: 60vh;
+    }
+
+    header.signup {
+        border-radius: 15px 0px 0px 15px;
+        box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
+    }
+
+    main.signup {
+        background: $white;
+        border-radius: 0px 15px 15px 0px;
+        box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
+    }
+}
