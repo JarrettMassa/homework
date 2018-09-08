@@ -1,17 +1,4 @@
-body {
-    background: $white;
-    margin: 0px;
-    padding: 0px;
-    font-family: Montserrat;
-    @include centeredDiv();
-    flex-direction: column;
-
-}
-
-.container {
-    width: 100%;
-}
-
+// Blue header that holds logos
 header.signup {
 
     background: $blue;
@@ -20,6 +7,7 @@ header.signup {
     @include centeredDiv;
     flex-direction: column;
 
+    // microphone logo
     img {
         border: 2px solid $white;
         padding: 10px;
@@ -28,6 +16,7 @@ header.signup {
         height: 50px;
     }
 
+    // studio connect text logo
     h1 {
         color: $white;
         font-weight: 400;
@@ -35,13 +24,14 @@ header.signup {
     }
 }
 
+// white container that holds form
 main.signup {
 
     width: 100%;
     margin: 0px;
     @include centeredDiv;
 
-
+    // div that holds the "I own a studio" option
     .studio-check {
         border: 3px solid $gray;
         border-radius: 15px;
@@ -51,6 +41,7 @@ main.signup {
         width: 100%;
         @include blockDiv;
 
+        // the toggle switch
         .toggle {
 
             input {
@@ -107,9 +98,10 @@ main.signup {
         }
     }
 
+    // the input fields in the main section
     input {
         border: 3px solid $gray;
-        border-radius: 15px;
+        border-radius: 3px;
         padding: 5px 10px;
         margin: 30px 0px;
         font-size: 10pt;
@@ -120,12 +112,15 @@ main.signup {
 
     }
 
+    // takes off the outline when you click an input form
     input:focus {
         outline: none;
     }
 
 }
 
+// responsive for larger screens
+// our design is mobile first
 @media only screen and (min-width: 640px) {
     body {
         background: $gray;
@@ -136,18 +131,21 @@ main.signup {
         height: 100vh;
     }
 
+    // container that holds blue header and white form
+    // change from stacked divs to side-to-side
     .container {
-        display: flex;
         flex-direction: row;
         width: 80vw;
         height: 60vh;
     }
 
+    // blue section with logos - adds shadow and rounded corners
     header.signup {
         border-radius: 15px 0px 0px 15px;
         box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
     }
 
+    // white section with form - adds shadow and rounded corners
     main.signup {
         background: $white;
         border-radius: 0px 15px 15px 0px;

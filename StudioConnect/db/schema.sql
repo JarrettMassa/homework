@@ -7,7 +7,6 @@ CREATE TABLE musician
 (
 	id int NOT NULL AUTO_INCREMENT,
 	email varchar(255) NOT NULL,
-	pw varchar(255),
 	first_name varchar(255),
 	last_name varchar(255),
 	PRIMARY KEY (id)
@@ -18,7 +17,6 @@ CREATE TABLE studio
 (
 	id int NOT NULL AUTO_INCREMENT,
 	email varchar(255) NOT NULL,
-	pw varchar(255) NOT NULL,
 	name varchar(255),
 	address_1 varchar(255),
 	address_2 varchar(255),
@@ -50,6 +48,6 @@ CREATE TABLE login
 	id int NOT NULL AUTO_INCREMENT,
 	email varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,
-	type smallint NOT NULL,
+	type varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );

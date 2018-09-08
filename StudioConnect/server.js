@@ -8,7 +8,6 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //requiring models for syncing
-
 var db = require("./models");
 
 //Setup Express App to handle data parsing
@@ -24,9 +23,6 @@ app.set("view engine", "handlebars");
 
 //Routes
 // =============================================================
-require("./routes/api-routes.js")(app,db);
-require("./routes/seed-route.js")(app,db);
-// require("./routes/html-routes.js")(app);
 
 app.get('/login', function(req, res) {
     res.render('user-login');
@@ -36,12 +32,28 @@ app.get('/signup', function(req,res){
     res.render('signup');
 });
 
+app.get('/edit', function(req,res){
+    res.render('edit-profile');
+});
+// var router = express.Router();
+
+// router.get("/signup", function(req, res){
+//     res.render("signup")
+// app.get('/login', function(req, res) {
+//     res.render('user-login');
+// });
+
+// app.get('/signup', function(req,res){
+//     res.render('signup');
+// });
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app,db);
+
 // =============================================================
 
+
 // Sync models and then start Express app
-
 db.connection.sync({ force: true }).then(function() {
-
     app.listen(PORT, function(){
         console.log("App listening on PORT " + PORT);
     });

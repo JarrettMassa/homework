@@ -5,14 +5,14 @@
 
 h2 {
   color: $blue;
-  text-align: center;
+  margin-left: 45px;
 }
 
 .photo {
   width: 30%;
   height: 30%;
   padding-top: 30px;
-  margin-left: 246px;
+  margin-left: 50px;
 }
 
 .search {
@@ -26,13 +26,17 @@ h2 {
   font-family: Montserrat;
   
 }
+.bookings-summary{
+  display: flex;
+  justify-content: center;
 
 .pending {
     display: inline-block;
     width: 150px;
     height: 150px;
+    text-align: center;
     // background-color: lightblue;
-    margin-left: 10px;
+    
    
   }
 
@@ -40,8 +44,11 @@ h2 {
     display: inline-block;
     width: 150px;
     height: 150px;
+    text-align: center;
     // background-color: lightblue;
+   
   }
+}
 
   h3 {
       margin-left: 90px;

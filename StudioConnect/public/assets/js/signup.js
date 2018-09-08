@@ -39,7 +39,8 @@ function createStudio(event){
     //event.preventDefault();
     var studioInfo = {
         email: emailInput.val().trim(),
-        pw: pw1.val().trim()
+        password: pw1.val().trim(),
+        type: "studio"
     };
     //...And then adds it to the Studios table
     $.post("/signup/new-studio", studioInfo, function (result) {
@@ -61,7 +62,8 @@ function createMusician(event){
     //event.preventDefault();
     var musicianInfo = {
         email: emailInput.val().trim(),
-        pw: pw1.val().trim()
+        pw: pw1.val().trim(),
+        type: "musician"
     };
     //...And then adds it to the Studios table
     $.post("/signup/new-musician", musicianInfo, function (result) {

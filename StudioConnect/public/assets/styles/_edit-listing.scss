@@ -1,28 +1,90 @@
+// container that holds entire edit-listing page
 .edit-listing {
-
     color: $blue;
+    @include centeredDiv;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
 
-    .arrow {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-
+    // titles 
     h2 {
         text-transform: uppercase;
+        text-align: center;
     }
 
+    // input fields 
+    input {
+        border: 3px solid $gray;
+        border-radius: 3px;
+        padding: 5px 10px;
+        margin: 30px 0px;
+        font-size: 10pt;
+        font-family: Montserrat;
+        height: 30px;
+        width: 100%;
+        @include blockDiv;
+    }
+
+    // white section with basic info part of form
     section.basic {
         background-color: $white;
-        width: 100%;
+        padding: 20px;
+
+        .state-zip {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            .state {
+
+                border: 3px solid $gray;
+                border-radius: 3px;
+                padding: 5px 10px;
+                font-size: 10pt;
+                font-family: Montserrat;
+                height: 30px;
+                @include centeredDiv;
+
+                // select a state
+                select {
+                    border: none;
+                    background: $white;
+                    font-size: 10pt;
+                    font-family: Montserrat;
+                }
+
+                // take off 
+                select:focus {
+                    outline: none;
+                }
+            }
+
+            input {
+                width: 30%;
+                height: 30px;
+            }
+        }
     }
 
+    // gray section with studio details form
     section.details {
         background-color: $gray;
-        width: 100%;
         margin: 0px;
+        padding: 20px 20px 20px 20px;
+
+        textarea {
+            border: 3px solid $gray;
+            border-radius: 3px;
+            width: 100%;
+            height: 80px;
+            font-family: Montserrat;
+            size: 16pt;
+            resize: none;
+        }
+        textarea.focus {
+            outline: none;
+        }
     }
-
-
-
 }
+
+

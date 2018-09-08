@@ -13,5 +13,14 @@ module.exports = function(app){
     app.get('/signup', function(req,res){
         res.render('signup');
     });
+
+    app.get('/edit-profile', function(req,res){
+        res.render('edit-profile');
+    });
+
+    app.get('/edit-listing', function(req,res){
+        res.render('edit-listing');
+
+    });
     
 };

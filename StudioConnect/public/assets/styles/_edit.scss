@@ -1,3 +1,10 @@
+.edit-profile{
+
+input{
+    border: none;
+}
+
+
 p {
     float: right;
     font-size: 10px;
@@ -7,7 +14,7 @@ p {
 
 
 h1 {
-    color: $blue;
+    color: $white;
 }
 
 body{
@@ -26,7 +33,7 @@ body{
     outline: none;
 }
 
-#user, #envelope, #key{
+.icon{
     padding-top: 10px;
     margin-left: 10px;
 
@@ -35,4 +42,19 @@ body{
 .aboutme {
     width:100%;
     border-radius: 0px;
+}
+
+.input-container{
+    display: flex;
+    border-radius: 3px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3px;
+    border: 3px solid $gray;
+    @media only screen and (min-width: 640px){
+        background: $white;
+    }
+
+}
+
 }

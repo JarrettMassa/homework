@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body {
+  background: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
+  font-family: Montserrat;
+  color: #06498F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
 .login {
   width: 100%;
   margin: 0px;
   padding: 0px; }
+
+.container {
+  width: 100%;
+  display: flex; }
 
 input.submit {
   width: 100%;
@@ -61,21 +76,92 @@ input:nth-child(1) {
   align-items: center;
   justify-content: space-between; }
 
-input:focus {
+.login:focus, input:focus {
   outline: none; }
 
-body {
-  background: #FFFFFF;
-  margin: 0px;
-  padding: 0px;
-  font-family: Montserrat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+.edit-profile input {
+  border: none; }
 
-.container {
-  width: 100%; }
+.edit-profile p {
+  float: right;
+  font-size: 10px;
+  font-weight: 1000; }
+
+.edit-profile h1 {
+  color: #FFFFFF; }
+
+.edit-profile body {
+  background-color: #FFFFFF; }
+
+.edit-profile .save {
+  background-color: #06498F;
+  color: #FFFFFF;
+  width: 50%;
+  height: 30px;
+  border-radius: 5px; }
+
+.edit-profile .save:focus, .edit-profile .aboutme {
+  outline: none; }
+
+.edit-profile .icon {
+  padding-top: 10px;
+  margin-left: 10px; }
+
+.edit-profile .aboutme {
+  width: 100%;
+  border-radius: 0px; }
+
+.edit-profile .input-container {
+  display: flex;
+  border-radius: 3px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px;
+  border: 3px solid #E1E3EA; }
+  @media only screen and (min-width: 640px) {
+    .edit-profile .input-container {
+      background: #FFFFFF; } }
+
+.card {
+  width: 50%;
+  height: 50%; }
+
+h2 {
+  color: #06498F;
+  margin-left: 45px; }
+
+.photo {
+  width: 30%;
+  height: 30%;
+  padding-top: 30px;
+  margin-left: 50px; }
+
+.search {
+  background-color: #06498F;
+  color: #FFFFFF;
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 90px;
+  font-size: 12px;
+  font-family: Montserrat; }
+
+.bookings-summary {
+  display: flex;
+  justify-content: center; }
+  .bookings-summary .pending {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center; }
+  .bookings-summary .approved {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center; }
+
+h3 {
+  margin-left: 90px; }
 
 header.signup {
   background: #06498F;
@@ -151,7 +237,7 @@ main.signup {
       transform: translateX(26px); }
   main.signup input {
     border: 3px solid #E1E3EA;
-    border-radius: 15px;
+    border-radius: 3px;
     padding: 5px 10px;
     margin: 30px 0px;
     font-size: 10pt;
@@ -173,7 +259,6 @@ main.signup {
     flex-direction: row;
     height: 100vh; }
   .container {
-    display: flex;
     flex-direction: row;
     width: 80vw;
     height: 60vh; }
@@ -185,90 +270,156 @@ main.signup {
     border-radius: 0px 15px 15px 0px;
     box-shadow: 0px 6px 35px 0px #7f7f7f; } }
 
-<<<<<<< HEAD
-.login:focus, input:focus {
-  outline: none; }
-
-p {
-  float: right;
-  font-size: 10px;
-  font-weight: 1000; }
-
-h1 {
-  color: #06498F; }
-
-body {
-  background-color: #FFFFFF; }
-
-.save {
-  background-color: #06498F;
-  color: #FFFFFF;
-  width: 50%;
-  height: 30px;
-  border-radius: 5px; }
-
-.save:focus, .aboutme {
-  outline: none; }
-
-#user, #envelope, #key {
-  padding-top: 10px;
-  margin-left: 10px; }
-
-.aboutme {
-  width: 100%;
-  border-radius: 0px; }
-
-.card {
-  width: 50%;
-  height: 50%; }
-
-h2 {
-  color: #06498F;
-  text-align: center; }
-
-.photo {
-  width: 30%;
-  height: 30%;
-  padding-top: 30px;
-  margin-left: 246px; }
-
-.search {
-  background-color: #06498F;
-  color: #FFFFFF;
-  width: 50%;
-  height: 30px;
-  border-radius: 5px;
-  margin-left: 90px;
-  font-size: 12px;
-  font-family: Montserrat; }
-
-.pending {
-  display: inline-block;
-  width: 150px;
-  height: 150px;
-  margin-left: 10px; }
-
-.approved {
-  display: inline-block;
-  width: 150px;
-  height: 150px; }
-
-h3 {
-  margin-left: 90px; }
-=======
 .edit-listing {
-  color: #06498F; }
+  color: #06498F;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0px 6px 35px 0px #7f7f7f;
+          box-shadow: 0px 6px 35px 0px #7f7f7f;
+}
+
+.edit-listing h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.edit-listing input {
+  border: 3px solid #E1E3EA;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 30px 0px;
+  font-size: 10pt;
+  font-family: Montserrat;
+  height: 30px;
+  width: 100%;
+  box-shadow: 0px 6px 35px 0px #7f7f7f; }
   .edit-listing .arrow {
     position: absolute;
     top: 10px;
     left: 10px; }
   .edit-listing h2 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
+  .edit-listing input {
+    border: 3px solid #E1E3EA;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin: 30px 0px;
+    font-size: 10pt;
+    font-family: Montserrat;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
   .edit-listing section.basic {
     background-color: #FFFFFF;
-    width: 100%; }
+    padding: 20px; }
+    .edit-listing section.basic .state-zip {
+      display: flex;
+      justify-content: space-around;
+
+      align-items: center; }
+      .edit-listing section.basic .state-zip .state {
+        border: 3px solid #E1E3EA;
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 10pt;
+        font-family: Montserrat;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .edit-listing section.basic .state-zip .state select {
+          border: none;
+          background: #FFFFFF;
+          font-size: 10pt;
+          font-family: Montserrat; }
+        .edit-listing section.basic .state-zip .state select:focus {
+          outline: none; }
+      .edit-listing section.basic .state-zip input {
+        width: 30%;
+        height: 30px; }
   .edit-listing section.details {
     background-color: #E1E3EA;
-    width: 100%;
-    margin: 0px; }
->>>>>>> 84bb8e83e7c9cf8baa5ac7223e7cc12081dfd513
+    margin: 0px;
+    padding: 20px 20px 20px 20px; }
+    .edit-listing section.details textarea {
+      border: 3px solid #E1E3EA;
+      border-radius: 3px;
+      width: 100%;
+      height: 80px;
+      font-family: Montserrat;
+      size: 16pt; }
+=======
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.edit-listing section.basic .state-zip .state {
+  border: 3px solid #E1E3EA;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 10pt;
+  font-family: Montserrat;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-listing section.basic .state-zip .state select {
+  border: none;
+  background: #FFFFFF;
+  font-size: 10pt;
+  font-family: Montserrat;
+}
+
+.edit-listing section.basic .state-zip .state select:focus {
+  outline: none;
+}
+
+.edit-listing section.basic .state-zip input {
+  width: 30%;
+  height: 30px;
+}
+
+.edit-listing section.details {
+  background-color: #E1E3EA;
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+
+.edit-listing section.details textarea {
+  border: 3px solid #E1E3EA;
+  border-radius: 3px;
+  width: 100%;
+  height: 80px;
+  font-family: Montserrat;
+  size: 16pt;
+  resize: none;
+}
+
+.edit-listing section.details textarea.focus {
+  outline: none;
+}
+/*# sourceMappingURL=main.css.map */
+
