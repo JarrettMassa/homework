@@ -1,0 +1,37 @@
+{
+  "name": "studioconnect",
+  "version": "1.0.0",
+  "description": "Kristine Rosette Enerio: Back-end team member for Studio Connect",
+  "main": "server.js",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "mongojs": "^2.6.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.1",
+    "node-sass": "^4.9.3",
+    "parser": "^0.1.4",
+    "path": "^0.12.7",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StudioConnect/StudioConnect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StudioConnect/StudioConnect/issues"
+  },
+  "homepage": "https://github.com/StudioConnect/StudioConnect#readme"
+}
