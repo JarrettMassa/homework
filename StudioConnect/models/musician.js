@@ -3,6 +3,8 @@ module.exports = function(connection, DataTypes) {
     email: DataTypes.STRING,
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
+    bio: DataTypes.STRING
+
   });
   return Musician;
 };

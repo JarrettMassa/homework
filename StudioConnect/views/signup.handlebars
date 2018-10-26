@@ -1,35 +1,35 @@
-<div class="container">
-    <header class="signup">
+<div class="login-container">
+
+    <header class="login-header">
 
         <img src="/assets/img/icon-white.png">
         <h1>Studio<strong>Connect</strong></h1>
 
     </header>
     
-    <main class="signup">
+    <main class="login-main">
         <form role="sign-up">
 
             <div class="studio-check">
-                I own a studio.
+                <p id="user-check">I own a studio.</p>
                 <div class="toggle">
                     <label class="switch">
-                        <input type="checkbox" checked id="check" value="studio">
+                        <input type="checkbox" id="check" value="studio" checked>
                         <span class="slider"></span>
                     </label>
                 </div>
             </div>
 
-            <input type="email" class="signup" id="email" placeholder="Enter Email">
-            <input type="password" class="signup" id="password" placeholder="Enter Password">
-            <input type="password" class="signup" id="password-conf" placeholder="Confirm Password">
-
-            <input type="submit" class="submit" placeholder="Sign Up">
+            <input type="email" class="signup" id="email" placeholder="Enter Email" required>
+            <input type="password" class="signup" id="password" placeholder="Enter Password" required>
+            <input type="password" class="signup" id="password-conf" placeholder="Confirm Password" required>
+            <button type="submit" class="submit">Sign Up</button>
 
 
         </form>
 
     </main>
 
-<script src="/signup.js"></script>
-
 </div>
+
+<script src="/signup.js"></script>

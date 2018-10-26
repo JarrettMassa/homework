@@ -1,14 +1,18 @@
 <div class="edit-listing">
+    <header class="main-header">
+        <h2>Edit<strong>Listing</strong></h2>
+    </header>
 
-    <form role="edit-listing">
+    <form role="listing">
         <section class="basic">
-            <h2>Basic Information</h2>
+            <h3>Basic Information</h3>
 
             <input type="text" id="studio-name" placeholder="Studio Name" required />
-            <input type="text" id="studio-email" placeholder="Email" required />
+            <input type="text" id="studio-email" disabled ="disabled" placeholder="Email" required />
             <input type="text" id="studio-address-1" placeholder="Address 1" required/>
             <input type="text" id="studio-address-2" placeholder="Address 2" />
             <input type="text" id="studio-city" placeholder="City" required/>
+
             <div class="state-zip">
                 <div class="state">
                     <select id="studio-state" required>
@@ -65,12 +69,12 @@
                         <option value="WY">WY</option>
                     </select>
                 </div>    
-                <input type="text" id="studio-zip" placeholder="Zip Code" required />
+                <input type="text" id="studio-zip" class="zip" placeholder="Zip Code" required />
             </div>      
 
         </section>
         <section class="details">
-            <h2>Studio Details</h2>
+            <h3>Studio Details</h3>
 
             <input type="text" id="studio-photo" placeholder="Photo URL" />
             <textarea id="studio-desc">Studio Description</textarea>
@@ -78,7 +82,9 @@
             <input type="text" id="studio-price" placeholder="Price Per Session" />
 
         </section>
-        <input type="submit" class="submit" value="Update Listing">
+        <button type="submit" class="submit">Update Listing</button>
     </form>
+
+{{> footer}}
 
 </div>    

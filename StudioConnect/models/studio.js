@@ -1,7 +1,12 @@
 module.exports = function(connection, DataTypes) {
   var Studio = connection.define("Studio", {
-    email: DataTypes.STRING,
     name: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true
+      }
+    },
     address_1: DataTypes.STRING,
     address_2: DataTypes.STRING,
     city: DataTypes.STRING,

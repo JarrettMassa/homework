@@ -25,16 +25,24 @@ app.set("view engine", "handlebars");
 // =============================================================
 
 app.get('/login', function(req, res) {
-    res.render('user-login');
+    res.render('user-login', {
+        layout:"signup-wrapper"
+    });
 });
 
 app.get('/signup', function(req,res){
-    res.render('signup');
+    res.render('signup', {
+        layout: "signup-wrapper"
+    });
 });
 
 app.get('/edit', function(req,res){
     res.render('edit-profile');
 });
+
+// app.get('/view-listing', function(req,res){
+//     res.render('view-listing');
+// });
 // var router = express.Router();
 
 // router.get("/signup", function(req, res){
@@ -48,12 +56,15 @@ app.get('/edit', function(req,res){
 // });
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app,db);
+require("./routes/seed-route.js")(app,db);
+require("./routes/signin-route.js")(app,db);
 
 // =============================================================
 
 
 // Sync models and then start Express app
-db.connection.sync({ force: true }).then(function() {
+//{ force: true }
+db.connection.sync().then(function() {
     app.listen(PORT, function(){
         console.log("App listening on PORT " + PORT);
     });

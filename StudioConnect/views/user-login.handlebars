@@ -1,17 +1,18 @@
-
-    <header>
-
+<div class="login-container">
+    <header class="login-header">
         <img src="/assets/img/icon-white.png">
         <h1>Studio<strong>Connect</strong></h1>
-
+        
     </header>
 
-    <form role="login">
-        <input type="text" name="email" class="email" placeholder="email"><br>
-        <br>
-        <input type="password" name="password" class="password" placeholder="password">
+    <main class="login-main">
+        <form role="log-in">
+            <h2>Welcome Back!</h2>
+            <input type="text" class="email" placeholder="Email" required>
+            <input type="password" class="password" placeholder="Password" required>
+            <button type="submit" class="submit">LOG IN</button>
+        </form>
+        <script src="/signin.js"></script>
+    </main>
+</div>
 
-        <br>
-        <button type="submit" form="form1" value="login" class="login">LOGIN</button>
-
-    </form>

@@ -20,6 +20,18 @@
       "database": "connect_db_production",
       "host": "127.0.0.1",
       "dialect": "mysql"
-    }
+      
+    },
+    "dan": {
+      "username": "root",
+      "password": "Dannyboy!123",
+      "database": "connect_db",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "dialect": "mysql"
+    }    
+
   }
+
+
   

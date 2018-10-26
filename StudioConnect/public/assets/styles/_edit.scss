@@ -1,60 +1,108 @@
-.edit-profile{
+#edit {
+  @include centeredDiv;
+  flex-direction: column;
+  background: $white;
+  width: 100vw;
+  text-align: center;
+  margin: 0px;
 
-input{
-    border: none;
-}
-
-
-p {
-    float: right;
-    font-size: 10px;
-    font-weight: 1000;
-}
-
-
-
-h1 {
+  @media only screen and (min-width: 640px) {
+    width: 80vw;
+    box-shadow: 0px 6px 35px 0px rgb(127, 127, 127);
+  }
+  h1 {
+    text-transform: uppercase;
     color: $white;
-}
-
-body{
-    background-color: $white;
-}
-
-.save {
-    background-color: $blue;
-    color: $white;
-    width: 50%;
-    height: 30px;
-    border-radius: 5px;
-}
-
-.save:focus, .aboutme {
-    outline: none;
-}
-
-.icon{
-    padding-top: 10px;
-    margin-left: 10px;
+    margin: 0px 0px 10px 0px;
+  }
 
 }
 
-.aboutme {
-    width:100%;
-    border-radius: 0px;
-}
+#edit form {
+  background-color: $white;
+  padding: 40px 0px;
+  @include centeredDiv;
+  flex-direction: column;
 
-.input-container{
-    display: flex;
-    border-radius: 3px;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 3px;
+  @media only screen and (min-width: 640px) {
+    width: 80vw;
+  }
+
+  // input fields
+  .input-container {
     border: 3px solid $gray;
-    @media only screen and (min-width: 640px){
-        background: $white;
+    border-radius: 3px;
+    margin-bottom: 10px; 
+  }
+
+  input {
+    border: none;
+    padding: 3px 10px;
+    font-size: 10pt;
+    font-family: Montserrat;
+    height: 30px;
+    width: 300px;
+    margin-bottom: 5px;
+    color: $blue;
+  }
+
+
+  input:focus {
+    outline: none;
+  }
+}
+
+label {
+    // border: 3px solid $gray;
+    // border-radius: 3px;
+    padding: 5px 10px;
+}
+.details {
+    background-color: $gray;
+    padding: 20px 0px;
+    @include centeredDiv;
+    flex-direction: column;
+    width: 100vw;
+    margin-bottom: 40px;
+
+    @media only screen and (min-width: 640px) {
+        width: 80vw;
+
+    }
+    h3 {
+        text-transform: uppercase;
+        color: $blue;
+        margin: 0px 0px 10px 0px;
     }
 
+  textarea {
+    border: 3px solid $gray;
+    border-radius: 3px;
+    width: 300px;
+    height: 80px;
+    font-family: Montserrat;
+    font-size: 1em;
+    size: 16pt;
+    resize: none;
+    margin-bottom: 10px;
+    
+  }
+  textarea:focus {
+    outline: none;
+  }
 }
 
-}
+button.submit {
+    width: 300px;
+    background:$blue;
+    color: $white;
+    border-radius: 3px;
+    padding: 5px 10px;
+    height: 40px;
+    border: none;
+    font-size: 1em;
+    font-family: Montserrat;
+    margin: 10px 0px; }
+  
+  button.submit:focus {
+    outline: none; }

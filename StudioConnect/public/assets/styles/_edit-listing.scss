@@ -1,15 +1,38 @@
 // container that holds entire edit-listing page
 .edit-listing {
-    color: $blue;
     @include centeredDiv;
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
+    flex-direction: column;
+    background: $white;
+    width: 100vw;
+    text-align: center;
+    margin: 0px;
+
+    @media only screen and (min-width: 640px) {
+        width: 80vw;
+        box-shadow: 0px 6px 35px 0px rgb(127, 127, 127);
+    }
+}
+
+// //////////////////////////////////////////
+// white section with basic info part of form
+// //////////////////////////////////////////
+
+section.basic {
+    background-color: $white;
+    padding: 40px 0px;
+    @include centeredDiv;
+    flex-direction: column;
+
+    @media only screen and (min-width: 640px) {
+        width: 80vw;
+    }
+
 
     // titles 
-    h2 {
+    h3 {
         text-transform: uppercase;
-        text-align: center;
+        color: $blue;
+        margin: 0px 0px 10px 0px;
     }
 
     // input fields 
@@ -17,74 +40,108 @@
         border: 3px solid $gray;
         border-radius: 3px;
         padding: 5px 10px;
-        margin: 30px 0px;
         font-size: 10pt;
         font-family: Montserrat;
-        height: 30px;
-        width: 100%;
-        @include blockDiv;
+        height: 40px;
+        width: 300px;
+        margin-bottom: 10px;
+        color: $blue;
     }
 
-    // white section with basic info part of form
-    section.basic {
-        background-color: $white;
-        padding: 20px;
+    input:focus {
+        outline: none;
+    }
+}
 
-        .state-zip {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-    
-            .state {
+// div holding the state and zip code
+.state-zip {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
 
-                border: 3px solid $gray;
-                border-radius: 3px;
-                padding: 5px 10px;
-                font-size: 10pt;
-                font-family: Montserrat;
-                height: 30px;
-                @include centeredDiv;
-
-                // select a state
-                select {
-                    border: none;
-                    background: $white;
-                    font-size: 10pt;
-                    font-family: Montserrat;
-                }
-
-                // take off 
-                select:focus {
-                    outline: none;
-                }
-            }
-
-            input {
-                width: 30%;
-                height: 30px;
-            }
-        }
+    input.zip {
+        width: 125px;
     }
 
-    // gray section with studio details form
-    section.details {
-        background-color: $gray;
-        margin: 0px;
-        padding: 20px 20px 20px 20px;
+    .state {
+    // div surrounding the state select
+        border: 3px solid $gray;
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 10pt;
+        font-family: Montserrat;
+        height: 40px;
+        @include centeredDiv;
 
-        textarea {
-            border: 3px solid $gray;
-            border-radius: 3px;
-            width: 100%;
-            height: 80px;
+        // select a state
+        select {
+            border: none;
+            background: $white;
+            font-size: 10pt;
             font-family: Montserrat;
-            size: 16pt;
-            resize: none;
+            width: 125px;
         }
-        textarea.focus {
+
+        // take off focus
+        select:focus {
             outline: none;
         }
     }
 }
+// ///////////////////////////////////////////
+// gray section with studio details form
+// //////////////////////////////////////////
 
+section.details {
+    background-color: $gray;
+    padding: 20px 0px;
+    @include centeredDiv;
+    flex-direction: column;
+    width: 100vw;
+    margin-bottom: 40px;
 
+    @media only screen and (min-width: 640px) {
+        width: 80vw;
+
+    }
+
+    // titles 
+    h3 {
+        text-transform: uppercase;
+        color: $blue;
+        margin: 0px 0px 10px 0px;
+    }
+
+    // input fields 
+    input {
+        border: 3px solid $gray;
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 10pt;
+        font-family: Montserrat;
+        height: 40px;
+        width: 300px;
+        margin-bottom: 10px;
+        color: $blue;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    textarea {
+        border: 3px solid $gray;
+        border-radius: 3px;
+        width: 300px;
+        height: 80px;
+        font-family: Montserrat;
+        font-size: 1em;
+        size: 16pt;
+        resize: none;
+        margin-bottom: 10px;
+
+    }
+    textarea:focus {
+        outline: none;
+    }
+}

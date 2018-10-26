@@ -1,12 +1,21 @@
-header {
+// Blue header that holds logos
+header.login-header {
 
     background: $blue;
-    width: 100%;
     margin: 0px;
     padding: 10% 0% 5% 0%;
     @include centeredDiv;
     flex-direction: column;
 
+    // Responsive 
+    @media only screen and (min-width: 640px) {
+        border-radius: 15px 0px 0px 15px;
+        box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
+        width: 50%;
+        height: 60vh;
+    }
+
+    // microphone logo
     img {
         border: 2px solid $white;
         padding: 10px;
@@ -15,6 +24,7 @@ header {
         height: 50px;
     }
 
+    // studio connect text logo
     h1 {
         color: $white;
         font-weight: 400;
@@ -22,44 +32,43 @@ header {
     }
 }
 
+// white container that holds form
+main.login-main {
 
+    width: 100%;
+    margin: 0px;
+    @include centeredDiv;
+    background:$white;
+    padding-top: 10%;
 
-// .email {
-//     border: 3px solid $gray;
-//     border-radius: 10px;
-//     padding: 5px 10px;
-//     margin: 90px;
-//     font-size: 10pt;
-//     @include blockDiv;
-// }
+    // Responsive
+    @media only screen and (min-width: 640px) {
 
-input {
-    width: 50vw;
-    border: 3px solid $gray;
-    border-radius: 10px;
-    padding: 5px 10px;
-    // margin-top: 30px;
-    font-size: 10pt;
-    font-family: Montserrat;
-    @include blockDiv;
-}
+        // laptop view for main container that holds form
+        border-radius: 0px 15px 15px 0px;
+        box-shadow: 0px 6px 35px 0px rgba(127,127,127,1);
+        width: 50%;
+        height: 60vh;
+        padding-top: 0%;
+    }
 
-input:nth-child(1) {
-    margin-top: 50px;
-}
+    // the input fields that live in the main
+    input {
+        border: 3px solid $gray;
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 10pt;
+        font-family: Montserrat;
+        height: 40px;
+        width: 300px;
+        margin-bottom: 10px;
+        color: $blue;
+        @include blockDiv;
+    }
 
-.login {
-    color: $white;
-    background-color: $blue;
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 10pt;
-    font-family: Montserrat;
-    text-align: center;
-    @include blockDiv;
-}
-
-.login:focus, input:focus {
-    outline: none;
+    // Takes away the outline when you click the fields or buttons
+    input:focus {
+        outline: none;
+    }
 }
 

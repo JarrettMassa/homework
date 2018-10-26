@@ -1,0 +1,61 @@
+.view-listing {
+
+    @include centeredDiv;
+    flex-direction: column;
+    background: $white;
+    width: 100vw;
+    text-align: center;
+    margin: 0px;
+
+    @media only screen and (min-width: 640px) {
+        width: 80vw;
+        box-shadow: 0px 6px 35px 0px rgb(127, 127, 127);
+    }
+}
+
+main.listing {
+
+    @include centeredDiv;
+    flex-direction: column;
+
+
+    section.listing-photo {
+        position: relative;
+        height: 35vh;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background: $gray;
+
+        @media only screen and (min-width: 640px) {
+            width: 80vw;
+        }
+    }
+
+    section.listing-info {
+
+        text-align: left;
+        width: 80vw;
+
+        @media only screen and (min-width: 640px) {
+            width: 50vw;
+        }
+
+        h3.studio-name {
+            margin: 15px 0px 5px 0px;
+        }
+
+        .loc-price {
+            margin: 10px 0px;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            margin: 0px;
+        }
+        
+
+    }
+
+}

@@ -1,0 +1,18 @@
+// Color variables
+$blue: #06498F;
+$gray:#E1E3EA;
+$white: #FFFFFF;
+$black: #061A2F;
+
+// Creates a centered div
+@mixin centeredDiv() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin blockDiv() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

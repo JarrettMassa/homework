@@ -1,60 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-$blue: #06498F;
-$gray:#E1E3EA;
-$white: #FFFFFF;
-$black: #061A2F;
+@import 'variables-mixins';
 
-// Creates a centered div
-@mixin centeredDiv() {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin blockDiv() {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-body {
-    background: $white;
-    margin: 0px;
-    padding: 0px;
-    font-family: Montserrat;
-    color: $blue;
-    @include centeredDiv();
-    flex-direction: column;
-}
-
-.login {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-
-// Container holding login & signup header & main
-.container {
-    width: 100%;
-    display:flex;
-}
-
-// Submit buttons
-input.submit {
-    width: 100%;
-    background: $blue;
-    color: $white;
-    border-radius: 10px;
-    padding: 5px 10px;
-    height: 40px;
-    border: 3px solid $blue;
-    font-size: 10pt;
-    font-family: Montserrat;
-}
+@import 'landing';
 
 @import 'login';
-
 
 @import 'edit';
 
@@ -64,3 +14,93 @@ input.submit {
 
 @import 'edit-listing';
 
+@import 'view-listing';
+
+@import 'musician-main';
+
+
+// Do not remove or comment this out. 
+// It allows all of our fileds and buttons to be the same size.
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $white;
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat;
+    font-size: 1em;
+    color: $blue;
+    @include centeredDiv();
+    flex-direction: column;
+
+    @media only screen and (min-width: 640px) {
+        background: $gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+body.signup-body{
+    @media only screen and (min-width: 640px) {
+        height: 100vh;
+    }
+}
+
+// Container holding login screen header and main form
+.login-container {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media only screen and (min-width: 640px) {
+        flex-direction: row;
+        width: 80vw;
+    }
+}
+
+// blue header on top of every page
+header.main-header {
+    background: $blue;
+    width: 100%;
+    height: 10vh;
+    @include centeredDiv;
+
+    h2 {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 20px 0px;
+    }
+}
+
+//main footer on the bottom of every page
+footer.main-footer {
+    color: white;
+    @include centeredDiv;
+    background: $blue;
+    width: 100%;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+// Submit buttons
+button.submit {
+    width: 300px;
+    background: $blue;
+    color: $white;
+    border-radius: 3px;
+    padding: 5px 10px;
+    height: 40px;
+    border: none;
+    font-size: 1em;
+    font-family: Montserrat;
+    margin: 10px 0px;
+}
+
+button.submit:focus {
+    outline: none;
+}

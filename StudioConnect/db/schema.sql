@@ -9,6 +9,7 @@ CREATE TABLE musician
 	email varchar(255) NOT NULL,
 	first_name varchar(255),
 	last_name varchar(255),
+	bio varchar(255),
 	PRIMARY KEY (id)
 );
 
